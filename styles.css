@@ -7,25 +7,26 @@ body {
 #radar-container {
   width: 500px;
   height: 500px;
-  border: 2px solid #3498db;
+  border: 2px solid #27ae60; /* Borde verde */
   border-radius: 50%;
   margin: 50px auto;
   position: relative;
+  overflow: hidden;
 }
 #radar-sweep {
-  width: 100%;
+  width: 50%;
   height: 100%;
-  border-radius: 50%;
+  background: linear-gradient(to right, rgba(39, 174, 96, 0.7), transparent);
   position: absolute;
-  background: rgba(52, 152, 219, 0.5);
-  transform-origin: 50% 100%;
+  left: 50%;
+  transform-origin: left;
   animation: sweep 2s linear infinite;
 }
 @keyframes sweep {
   from {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
 }
