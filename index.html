@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alley Radar</title> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <title>Alley Radar</title>
 </head>
 <body>
     <h1>Panel de control de radar</h1>
@@ -11,14 +13,14 @@
         <div id="radar-sweep"></div>
     </div>
     <button onclick="startRadar()">Iniciar radar</button>
-    <button onclick="stopRadar()">Detener radar</button> 
+    <button onclick="stopRadar()">Detener radar</button>
     <script>
         function startRadar() {
             fetch('/start-radar')
                 .then(response => response.text())
                 .then(data => console.log(data))
                 .catch(error => console.error('Error:', error));
-        } 
+        }
         function stopRadar() {
             fetch('/stop-radar')
                 .then(response => response.text())
@@ -27,4 +29,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
